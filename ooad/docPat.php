@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
     $state=$_POST['state'];
     $email=$_POST['emailid'];
     $phone=$_POST['phone'];
-
+    $skypeName=$_POST['skypeid'];
     $que1="SELECT * FROM patient where username='$username'";
     $rec=mysqli_query($con,$que1);
     if(!$rec)
@@ -36,7 +36,7 @@ if(isset($_POST['submit']))
     }
     else
     {
-    	    $query="INSERT INTO patient VALUES('$fname','$lname','$username','$pass','$age','$defect','$address','$city','$state','$email','$phone')";
+    	    $query="INSERT INTO patient VALUES('$fname','$lname','$username','$pass','$age','$defect','$address','$city','$state','$email','$phone','$skypeName')";
  		   $record=mysqli_query($con,$query);
  		   if(!$record)
  		   {
@@ -75,6 +75,7 @@ if(isset($_POST['submit']))
 <body style="background-color: #CD853F">
 	<div class="container">
 <form class="well well-lg" action="#" method="POST">
+		<center><label><strong>Patient Registration</strong></label></center>
 	<div class="form-group">
 	<label>FirstName :</label>
 	<input type="text" name="firstname" class="form-control" placeholder="Enter FirstName" required><br>
@@ -98,6 +99,8 @@ if(isset($_POST['submit']))
 	<input type="email" name="emailid" class="form-control" placeholder="Enter Email" required><br>
 	<label>Phone :</label>
 	<input type="number" name="phone" class="form-control" placeholder="Enter Number" required><br>
+	<label>SkypeId :</label>
+	<input type="text" name="skypeid" class="form-control" placeholder="Enter SkypeID" required><br>
 	<center><button type="Submit" name="submit" class="btn btn-danger btn-lg">Submit</button></center>
 </div>
 </form>

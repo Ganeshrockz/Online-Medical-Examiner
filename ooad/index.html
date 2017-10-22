@@ -10,35 +10,63 @@
 		color: white;
 		display: block;
 		position: relative;
-		padding-right: 20px;
+		padding-right: 200px;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		padding-left: 10px;
+		padding-left: 200px;
 		margin-bottom: 10px;
 		margin-left: 10px;
 		float: left;
 		font-family: "Arial";
 		font-size: 20px;
+		border-radius: 25px;
 	}
 	a:hover{
 		background-color: green;
 	}
 	.disfield{
+
+		display:  inline-block;
 		margin-top: 50px;
-		margin-left: 500px;
-		margin-right: 700px;
+		margin-left: 150px;
+	}
+		.disfield1{
+
+		display:  inline-block;
+		margin-top: 50px;
+		margin-left: 300px;
+	}
+	fieldset{
+		text-align: center;
+		border-radius: 10px;
+
+	}
+	.head{
+		text-align:center;
+		background-color: darkblue;
+		color: white;
+		position: relative;
+		padding-bottom: 15px;
+		padding-top: 15px;
 	}
 </style>
 <body>
+	<div class="head">
+		<h1><strong>ONLINE MEDICAL EXAMINER</strong></h1>
+	</div>
 	<fieldset class="disfield">
-		<legend><h1>Doctor</h1></legend>
+		<legend><h2>DOCTOR</h2></legend>
 <a href="docReg.php">Signup</a>
-<a href="docLog.php">Login<span style="color: black">p</span></a>
+<a href="docLog.php">Login</a>
 </fieldset>
 	<fieldset class="disfield">
-		<legend><h1>Patient</h1></legend>
+		<legend><h2>PATIENT</h2></legend>
 <a href="docPat.php">Signup</a>
-<a href="patLog.php">Login<span style="color: black">p</span></a>
+<a href="patLog.php">Login</a>
+</fieldset>
+	<fieldset class="disfield1">
+		<legend><h2>ADMIN</h2></legend>
+<a href="adminLog.php" style="padding-left: 300px; padding-right: 300px;">Login</a>
 </fieldset>
 </body>
 </html>
